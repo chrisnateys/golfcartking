@@ -140,3 +140,7 @@ body {
 .footer-top .grid__item:nth-child(2) .stronk, .footer-top .grid__item:nth-child(3) .stronk {
   padding: 10px 0;
 }
+.icona, .iconb, .iconc {
+  display: inline-block;
+  font-size: 10px;
+}
