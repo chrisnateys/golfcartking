@@ -102,3 +102,41 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
+.footer-top {
+  background-color: #fcfaf8;
+  border-bottom: 1px solid #588b14;
+  border-top: 1px solid #588b14;
+  padding: 10px 0;
+}
+.footer-top .inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+.footer-top .stronk {
+  color: #788a9b;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+.footer-top img {
+  float: left;
+  margin-right: 20px;
+}
+.footer-top .grid__item {
+  height: 40px;
+}
+.footer-top .grid__item:nth-child(2) {
+	border-left: 1px solid #b5c893;
+	border-right: 1px solid #b5c893;
+}
+.footer-top .grid__item .notstronk {
+  line-height: 16px;
+}
+.footer-top .grid__item:nth-child(1) .stronk {
+  padding-top: 3px;
+}
+.footer-top .grid__item:nth-child(2) .stronk, .footer-top .grid__item:nth-child(3) .stronk {
+  padding: 10px 0;
+}
