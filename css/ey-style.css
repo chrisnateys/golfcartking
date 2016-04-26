@@ -26,7 +26,6 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 	font-weight: normal;
 	vertical-align: baseline;
 	background: transparent;
-	font-family: 'open sans';
 }
 article, aside, figure, footer, header, nav, section, details, summary {display: block;}
 /* Handle box-sizing while better addressing child elements:
@@ -109,10 +108,11 @@ button, input[type=button] {width: auto; overflow: visible;}
 body {
 	font-family: "roboto";
 }
-.TopMenu > .inner, #Header > .inner, .PageMenu > .inner, .main > .inner, .footer-main > .inner, .footer-links > .inner, .newsletter-subscription > .inner {
+.TopMenu > .inner, #Header > .inner, .PageMenu > .inner, .main > .inner, .footer-main > .inner, .footer-links > .inner, .newsletter-subscription > .inner, .greyitembar > .inner {
 	max-width: 1200px;
 	width: 100%;
 	padding: 0 10px;
+	margin: 0 auto;
 }
 #maintenance_notice {
 	display: none;
@@ -133,6 +133,9 @@ body {
 	padding: 1px 0;
 	line-height: 20px;
 	text-align: center;
+}
+.TopMenu li:last-child {
+	border-right: none;
 }
 .free-shipping, .cart {
   display: inline-block;
@@ -215,6 +218,7 @@ body {
 }
 .PageMenu .inner {
 	padding: 0;
+	background-color: transparent;
 }
 .PageMenu .sf-menu > li > a {
   color: #333333;
@@ -228,6 +232,9 @@ body {
 }
 .PageMenu .sf-menu > li:last-child {
 	margin-right: 0;
+}
+.PageMenu .CategoryList {
+	padding-left: 0;
 }
 .footer-top {
   background-color: #fcfaf8;
@@ -294,12 +301,17 @@ body {
 .footer-image {
   text-align: center;
 }
+.footer-main {
+  background: transparent none repeat scroll 0 0;
+  color: #5a6570;
+}
 .footer-main h4 {
   color: #5e8c19;
   font-family: "roboto";
   font-size: 16px;
   padding: 30px 0 0;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .footer-newsletter {
   text-align: center;
@@ -312,6 +324,7 @@ body {
   line-height: 26px;
   padding: 0;
   width: 52px;
+  text-transform: uppercase;
 }
 .footer-newsletter .subscribe_form .Textbox {
   border: medium none;
@@ -335,6 +348,9 @@ body {
   font-family: "roboto";
   text-align: center;
 }
+.footer-main a {
+	color: #5a6570;
+}
 .copyright a {
   color: white;
   text-decoration: underline;
@@ -356,6 +372,100 @@ body {
 .Breadcrumb {
   margin-top: 15px;
 }
+.Breadcrumb li a {
+	font-weight: normal;
+}
 .ProductThumbImage {
 	border: 1px solid #c3c8ce;
+}
+#ProductDetails .ProductThumbImage {
+  border: 1px solid #c3c8ce;
+  height: 350px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 400px;
+}
+#ProductDetails h1 {
+  color: #53890b;
+  font-family: "roboto";
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+.PrimaryProductDetails h4.BrandName, .PrimaryProductDetails h4.BrandName a {
+  color: #78706b;
+  font-size: 15px;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+.ProductPrice.RetailPrice {
+  color: #78706b;
+  display: block;
+  font-size: 18px;
+}
+.ProductPrice.VariationProductPrice {
+  color: #a11d2b;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+.ProductDetailsGrid .DetailRow {
+	margin-bottom: 0;
+}
+.ProductDetailsGrid .s-price .YouSave, .ProductDetailsGrid .s-price .YouSave span {
+  color: #78706b;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+.ProductDetailsGrid .Label {
+  color: #272827;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.qty .Value {
+  display: inline-block;
+  vertical-align: middle;
+}
+.DetailRow.qty div.selector {
+  background: transparent url("qty-select-bg.png") no-repeat scroll right center !important;
+  border: 1px solid #858c9b;
+  height: 30px;
+  width: 135px !important;
+  padding: 0px !important;
+}
+.qty .quantityInput {
+  -webkit-appearance: none;
+}
+#SideProductAddToWishList .btn {
+  background-color: transparent;
+  background-image: url("add-to-wishlist.png");
+  height: 60px;
+  width: 308px;
+}
+.addto #SideProductAddToWishList {
+  display: block;
+  margin-bottom: 15px;
+}
+.btn.add-to-cart {
+  background-color: transparent;
+  background-image: url("add-to-cart.png");
+  height: 60px;
+  width: 308px;
+}
+.addto .free-shipping {
+  color: #78706b;
+  font-size: 17px;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+.addto .free-shipping strong {
+	font-size: 22px;
+}
+#ProductDetails .ProductTinyImageList ul li, .ProductTinyImageList ul li div {
+	width: auto !important;
+	height: auto !important;
+	padding: 1px;
 }

@@ -1,23 +1,8 @@
 %%GLOBAL_NewsletterBoxControlScript%%
 
-                <form action="%%GLOBAL_ShopPath%%/subscribe.php" method="post" id="subscribe_form" class="subscribe_form" name="subscribe_form">
-                    <input type="hidden" name="action" value="subscribe" />
-                    <div class="grid">
-                        <div class="grid__item two-fifths">
-                            <label for="nl_first_name">Name</label>
-                            <input class="Textbox autobox" value="Name" id="nl_first_name" name="nl_first_name" type="text" />
-                        </div>
-                        <div class="grid__item two-fifths">
-                            <label for="nl_email">Email</label>
-                            <input class="Textbox autobox" value="Email" id="nl_email" name="nl_email" type="email" />
-                        </div>
-                        <div class="grid__item one-fifth">
-                            
-                            <input value="Submit" class="btn" type="submit" />
-                            
-                        </div>
-                    </div>
-                </form>
+<form action="%%GLOBAL_ShopPath%%/subscribe.php" method="post" id="subscribe_form" class="subscribe_form" name="subscribe_form">
+    <input type="hidden" name="action" value="subscribe" />
+    <input class="Textbox autobox" id="nl_email" name="nl_email" type="email" placeholder="Enter email address"/><input value="Join!" class="btn" type="submit" />
+</form>
 
 %%Panel.NewsletterJavaScript%%
-​
