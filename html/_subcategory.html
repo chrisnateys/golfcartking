@@ -1,0 +1,53 @@
+%%Panel.HTMLHead%%
+<body id="subcategory">
+    %%Panel.DrawerMenu%%
+    <div class="page">
+        %%Panel.Header%%
+        <div class="main">
+            <div class="inner">
+                %%Panel.WrapperBanner%%
+                %%Panel.CategoryBreadcrumb%%
+                <div class="productlist-page">
+                    %%Banner.TopBanner%%
+                    
+                    <div class="Left fleft">
+                        %%Panel.SideCategoryShopByPrice%%
+                        %%Panel.SideCustomCategoryList%%
+                    </div>
+                    <div class="Content Wide %%GLOBAL_ExtraCategoryClass%%" id="LayoutColumn1">
+                        %%Panel.CategoryHeading%%
+                        <div class="product-nav">
+                            %%SNIPPET_CategorySortBox%%
+                            %%Panel.CategoryPagingTop%%
+                            <!--<div class="catnav">%%Panel.SideCustomCategoryList%%</div>-->
+                            <div class="clear"></div>
+                        </div>
+                        %%SNIPPET_SubCategories%%
+                        %%Panel.CategoryContent%%
+                        <div class="CategoryDescription">
+                            %%GLOBAL_CatDesc%%
+                            %%Panel.SubCategoryMobileMenu%%
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    %%Banner.BottomBanner%%
+                </div>
+            </div>
+        </div>
+        %%Panel.Footer%%
+    </div>
+    <script type="text/javascript">
+        $('ul.ProductList > li').each(function(){
+            var regPrice = $(this).children('.p-price').contents("strike").text();
+            var salePrice = $(this).children('.p-price').contents(":not(strike)").text();
+            var youSave = Number(regPrice.replace(/[^0-9\.]+/g,"")) - Number(salePrice.replace(/[^0-9\.]+/g,""));
+            var htmlTxt = '<div class="listprice">List Price: '+regPrice+'</div>';
+            htmlTxt += '<div class="saleprice">Our Price: '+salePrice+'</div>';
+            htmlTxt += '<div class="youSave">Save $'+youSave.toFixed(2)+'!</div>';
+
+            $(this).children('.p-price').html(htmlTxt);
+        });
+    </script>
+</body>
+</html>
+​
